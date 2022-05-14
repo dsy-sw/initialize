@@ -1,0 +1,35 @@
+http://download.nvidia.com/XFree86/Linux-x86_64/460.91.03/
+
+RTX 3080 
+
+1. download
+NVIDIA-Linux-x86_64-460.91.03.run
+
+2. 빌드 패키지 설치
+make 설치
+$ apt-get install gcc make
+
+버젼확인
+$ make -v| 
+
+0.open console from login page
+open console from login page (ctrl+alt+f2)
+sudo systemctl stop gdm
+
+sudo apt --purge autoremove nvidia*
+
+3. $ systemctl isolate multi-user.target
+$ chmod +x ./NVIDIA-Linux-x86_64-460.91.03.run
+
+$ sudo sh ./NVIDIA-Linux-x86_64-460.91.03.run
+or
+sudo   ./NVIDIA-Linux-x86_64-460.91.03.run
+
+
+설치 완료 후
+ - 설치 과정 nvida-xconfig utility  
+  NO로 선택한다.
+
+systemctl start graphical.target
+
+nvidia-smi  
